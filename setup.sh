@@ -18,7 +18,7 @@ sudo true;
 clear
 
 MY_DIR="$(dirname "$0")"
-SKIP_ANALYTICS=${SKIP_ANALYTICS:-0}
+SKIP_ANALYTICS=${SKIP_ANALYTICS:-1}
 if (( SKIP_ANALYTICS == 0 )); then
     clientID=$(od -vAn -N4 -tx  < /dev/urandom)
     source ${MY_DIR}/scripts/helpers/google-analytics.sh ${clientID} start $@
@@ -32,7 +32,6 @@ source ${MY_DIR}/scripts/common/configuration-bash.sh
 
 # Place any applications that require the user to type in their password here
 brew cask install github
-brew cask install zoomus
 
 source ${MY_DIR}/scripts/common/git.sh
 source ${MY_DIR}/scripts/common/git-aliases.sh

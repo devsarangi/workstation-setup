@@ -1,0 +1,14 @@
+Host bitbucket.org
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/dsslalom
+
+Host github.com
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/gh
+
+Host github.ford.com
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/dsford
